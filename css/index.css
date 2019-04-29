@@ -169,13 +169,13 @@ nav a {
   transition: color 400ms ease-in, border 400ms ease-in-out,
     border-radius 400ms ease-out;
   border: solid 2px #f7f7f7;
-  padding: 10px;
+  padding: 15px;
 }
 
 nav a:hover {
-  color: rgb(230, 129, 36);
+  color: rgb(44, 44, 44);
   font-weight: 800;
-  border: solid 2px rgb(230, 129, 36);
+  border: solid 1px rgb(230, 129, 36);
   border-radius: 25px;
 }
 
@@ -193,12 +193,13 @@ header {
 }
 
 header img {
-  width: 70%;
+  max-width: 600px;
+  width: 40%;
 }
 
 header h1 {
   font-size: 90px;
-  width: 100%;
+  width: 40%;
   text-align: center;
   transition: color 600ms;
 }
@@ -311,27 +312,30 @@ body {
 }
 
 section.services {
-  margin-top: 17px;
+  margin-top: 60px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   height: 600px;
   margin-bottom: 17px;
-  /* border-bottom: solid 1px black; */
 }
 
 section.services img {
+  max-width: 1200px;
   width: 100%;
   height: auto;
+  margin: 0 auto;
 }
 
 section.services h1 {
+  max-width: 70%;
   font-size: 35px;
-  margin-top: 20px;
+  margin: 20px auto 0 auto;
 }
 section.services p {
   font-size: 20px;
-  margin: 20px 0;
+  margin: 20px auto;
+  max-width: 70%;
 }
 
 main.services {
@@ -382,6 +386,11 @@ section.facts {
   display: flex;
   flex-direction: row;
   margin-top: 40px;
+  justify-content: space-around;
+}
+
+section.facts img {
+  max-width: 50%;
 }
 
 div.factbox {
@@ -389,6 +398,7 @@ div.factbox {
   flex-direction: column;
   justify-content: space-around;
   margin: 35px;
+  width: 40%;
 }
 
 div.factbox h3 {
@@ -414,7 +424,7 @@ div.factbox ul li {
   header h1 {
     width: 100%;
     text-align: center;
-    padding: 18%;
+    padding: 8%;
   }
 
   nav {
@@ -425,9 +435,33 @@ div.factbox ul li {
     order: -1;
     width: 100%;
   }
+  /* Services */
+  section.services img {
+    margin: 50px auto 0 auto;
+  }
+  section.services p {
+    max-width: 90%;
+  }
+  section.facts {
+    flex-direction: column;
+    align-items: center;
+  }
+  div.factbox {
+    width: 70%;
+  }
+  div.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 250px;
+    width: 350px;
+    margin: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+  }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 630px) {
   nav {
     flex-wrap: wrap;
     position: relative;
@@ -461,5 +495,16 @@ div.factbox ul li {
   section.bottom div {
     width: 100%;
     margin: 30px 0;
+  }
+  /* Services Page */
+
+  div.factbox {
+    width: 70%;
+  }
+  section.services {
+    margin-top: 0;
+  }
+  section.services img {
+    margin: 25px auto 0 auto;
   }
 }
